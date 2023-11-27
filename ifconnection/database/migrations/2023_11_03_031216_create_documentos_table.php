@@ -17,6 +17,7 @@ class CreateDocumentosTable extends Migration
         $table->id();
         $table->string('nome');
         $table->text('descricao');
+        $table->text('comentario')->nullable();
         $table->unsignedBigInteger('orientacao_id');
         $table->foreign('orientacao_id')->references('id')->on('orientacoes')->onDelete('cascade');
         $table->string('documento'); 

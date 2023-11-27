@@ -152,6 +152,28 @@ class GestaoController extends Controller
         return response()->download($pathToFile, $nomeDoArquivo);
     }
 
+    public function createComentario($id){
+    
+        return view('gestao.cadastrarComentario',  compact('id'));
+    }
+
+    public function salvarComentario(Request $request, $id){
+    
+        $request->validate([
+    
+            'comentario' => 'nullable|string',
+    
+        ]);
+
+    
+        $documento = Documento::findOrFail($id);
+    
+        $documento->update(['comentario' => $request->input('comentario')]);
+
+    
+        return redirect()->route('gestao.documento', ['id' => $documento->orientacao_id]);
+    }
+
 
     
     public function reuniaoIndex($id)

@@ -48,6 +48,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/download/{id}', 'GestaoController@download')->name('documento.download');
     Route::get('/documento/cadastrar/{id}', 'GestaoController@cadastrarDocumento')->name('documento.cadastrar');
     Route::post('/documento/salvar', 'GestaoController@salvarDocumento')->name('documento.salvar');
+    Route::get('/documentos/novo-comentario/{id}', 'GestaoController@createComentario')->name('documento.novoComentario');
+    Route::post('/documentos/salvar-comentario/{id}','GestaoController@salvarComentario')->name('documento.salvarComentario');
 
     Route::get('/reuniao/cadastrar/{id}', 'GestaoController@cadastrarReuniao')->name('reuniao.cadastrar');
     Route::post('/reuniao/salvar', 'GestaoController@salvarReuniao')->name('reuniao.salvar');

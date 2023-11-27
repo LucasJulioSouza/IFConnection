@@ -15,7 +15,7 @@
                     </div>
                     <div class="card-footer">
                         <a href="{{ route('gestao.documento', ['id' => $orientacao->id]) }}" class="btn btn-primary btn-block">Documentos</a>
-                        <a href="{{ route('gestao.reuniao', ['id' => $orientacao->id]) }}" class="btn btn-secondary btn-block">Reuniões</a>
+                        <a href="{{ route('gestao.reuniao', ['id' => $orientacao->id]) }}" class="btn btn-warning btn-block">Reuniões</a>
                         <a href="{{ route('gestao.cronograma', ['id' => $orientacao->id]) }}" class="btn btn-info btn-block">Cronograma</a>
                     </div>
                 </div>

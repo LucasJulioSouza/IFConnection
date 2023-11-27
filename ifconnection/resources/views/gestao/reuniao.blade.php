@@ -5,6 +5,7 @@
 @section('conteudo')
 
 <a href="{{ route('reuniao.cadastrar', ['id' => $id]) }}" class="btn btn-primary">Adicionar Reunião</a>
+<a href="{{ route('gestao.index') }}" class="btn btn-secondary">Voltar</a>
 
 <div class="row mt-4">
     @foreach ($reunioes as $reuniao)

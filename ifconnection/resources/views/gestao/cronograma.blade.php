@@ -4,6 +4,7 @@
 
 @section('conteudo')
     <a href="{{ route('cronograma.cadastrar', ['id' => $id]) }}" class="btn btn-primary mb-3">Adicionar Tarefa</a>
+    <a href="{{ route('gestao.index') }}" class="btn btn-secondary mb-3">Voltar</a>
 
     <div class="bg-white rounded p-4">
         @if(session('success'))
