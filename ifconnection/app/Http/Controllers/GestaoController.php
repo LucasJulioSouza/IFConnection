@@ -153,8 +153,12 @@ class GestaoController extends Controller
     }
 
     public function createComentario($id){
+
+        $documento = Documento::findOrFail($id);
+
+        $comentarioExistente= $documento->comentario;
     
-        return view('gestao.cadastrarComentario',  compact('id'));
+        return view('gestao.cadastrarComentario',  compact('id','comentarioExistente'));
     }
 
     public function salvarComentario(Request $request, $id){
